@@ -25,9 +25,13 @@ hs_err_pid*
 ## IntelliJ IDEA
 # out folder
 **/out
+**/target
+!**/.mvn/wrapper/maven-wrapper.jar
 
 # .idea folder
 **/.idea
 
 # IntelliJ files
+**/*.iws
 **/*.iml
+**/*.ipr
