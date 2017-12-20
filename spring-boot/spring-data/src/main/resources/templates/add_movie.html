@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add new Movie</title>
+</head>
+<body>
+<form th:action="@{/movies}" th:method="post" th:object="${movie}">
+    <label for="id">
+        ID
+    </label>
+    <input type="text" name="id" id="id"
+           value="Auto generated"
+           disabled="disabled"/>
+    <label for="name">
+        Name
+    </label>
+    <input type="text" name="name" id="name"
+           th:field="*{name}"/>
+    <input type="submit" value="Add"/>
+</form>
+</body>
+</html>
