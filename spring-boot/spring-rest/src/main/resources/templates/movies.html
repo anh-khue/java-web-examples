@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Movies</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Detail</th>
+    </tr>
+    </thead>
+    <tbody id="movies-list">
+
+    </tbody>
+</table>
+
+<h2>Movie Detail</h2>
+<form action="" id="movie-detail">
+    <label for="movie-id">ID</label>
+    <input type="text" name="id" id="movie-id"/>
+    <label for="movie-name">Name</label>
+    <input type="text" name="name" id="movie-name"/>
+</form>
+
+<h2>Add new Movie</h2>
+<form action="" id="add-movie">
+    <label for="id">ID</label>
+    <input type="text" name="id" id="id" value="Auto generated" disabled="disabled"/>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name"/>
+    <button type="button" onclick="addNewMovie()">Add new Movie</button>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="movies-ajax.js"></script>
+<script>
+    $.ready(getAllMovies());
+</script>
+</body>
+</html>
